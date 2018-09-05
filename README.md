@@ -14,4 +14,8 @@
   # In second terminal (with first open), localhost is now my_server
   # When prompted for scp, enter password for user on my_server
   scp -P 2222 username_on_my_server@localhost:~/code/test.txt ./
+  
+  # Alternatively, you can just leave the port forwarded ssh tunnel open.
+  # And then you can just ssh in using the port listed:
+  ssh -p 2222 username_on_my_server@localhost
 ```
