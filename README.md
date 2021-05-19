@@ -19,3 +19,12 @@
   # And then you can just ssh in using the port listed:
   ssh -p 2222 username_on_my_server@localhost
 ```
+
+## declaring an array in bash of ls of directories, safeguarding for spaces in directory names
+```bash
+  # declare \n as the input field separator, assign output of ls directories (ls -d), delimited with new line character (ls -1) and quoting directories
+  IFS=$'\n' a=("$(ls -1 -d */)")
+  
+  # looping through array to demonstrate result of above
+  for i in ${a[@]}; do echo $i; done
+```
